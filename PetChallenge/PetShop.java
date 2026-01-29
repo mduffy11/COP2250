@@ -3,38 +3,15 @@
 public class PetShop {
 
 	public static void main(String[] args) {
+		Pet pet1 = new Pet("Buddy", 3, "Dog");
+		Pet pet2 = new Pet("Luna", 5, "Cat");
+		Pet pet3 = new Pet("Tweety", 1, "Bird");
 
-// Create a Pet object called pet1
+		pet1.speak();
+		pet2.speak();
+		pet3.speak();
 
-	Pet pet1 = new Pet();
-        
-// Set pet1's name to "Buddy"
-
-	pet1.name = "Buddy";
-
-// Set pet1's age to 3
-
-    pet1.age = 3;
-
-// Create a second Pet object called pet2
-	
-	Pet pet2 = new Pet();
-        
-// Set pet2's name to "Luna"
-
-	pet2.name = "Luna";
-
-// Set pet2's age to 5
-
-	pet2.age = 5;	
-        
-// Call speak() on pet1
-	
-	pet1.speak();
-        
-// Call speak() on pet2
-	
-	pet2.speak();
-    }
+		pet1.haveBirthday();
+		System.out.println(pet1.getName() + " is now " + pet1.getAge() + " years old.");
+	}
 }
-
