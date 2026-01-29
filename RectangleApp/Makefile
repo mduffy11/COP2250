@@ -1,12 +1,21 @@
-SRC_DIR=src/main/java
-PKG_PATH=com/duffy/rectangleapp
-CLASS=RectangleCalculator
+JAVAC = javac
+JAVA  = java
 
-all:
-	cd $(SRC_DIR) && javac $(PKG_PATH)/$(CLASS).java
+SRC_DIR = src/main/java
+PKG     = com.duffy.rectangleapp
+MAIN_CLASS = RectangleCalculator
 
-run: all
-	cd $(SRC_DIR) && java com.duffy.rectangleapp.$(CLASS)
+JAVA_FILE = $(SRC_DIR)/com/duffy/rectangleapp/$(MAIN_CLASS).java
+
+.PHONY: all compile run clean
+
+all: compile
+
+compile:
+	$(JAVAC) $(JAVA_FILE)
+
+run: compile
+	$(JAVA) -cp $(SRC_DIR) $(PKG).$(MAIN_CLASS)
 
 clean:
-	find $(SRC_DIR) -name "*.class" -delete
+	rm -f $(SRC_DIR)/com/duffy/rectangleapp/*.class
