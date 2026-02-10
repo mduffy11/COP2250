@@ -22,13 +22,14 @@ public class RockPaperScissors {
         
         // TODO 1: Create a String array called "choices" containing 
         //         "Scissor", "Rock", "Paper" (in that order)
-        
+        String[] choices = {"Scissor", "Rock", "Paper"};
         
         // TODO 2: Create a Scanner object called "input"
+        Scanner input = new Scanner(System.in);
         
         
         // TODO 3: Create a Random object called "rand"
-        
+        Random rand = new Random();
         
         // ============================================
         // ACT 2: GENERATE COMPUTER'S CHOICE
