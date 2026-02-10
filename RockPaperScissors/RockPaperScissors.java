@@ -37,17 +37,17 @@ public class RockPaperScissors {
         
         // TODO 4: Generate a random integer 0, 1, or 2
         //         Store it in a variable called "computer"
-        
+        int computer = rand.nextInt(3);
         
         // ============================================
         // ACT 3: GET USER'S CHOICE
         // ============================================
         
         // TODO 5: Print the prompt: "scissor (0), rock (1), paper (2): "
-        
+        System.out.print("scissor (0), rock (1), paper (2): ");
         
         // TODO 6: Read the user's choice into a variable called "user"
-        
+        int user = input.nextInt();
         
         // ============================================
         // ACT 4: DISPLAY CHOICES
@@ -55,11 +55,11 @@ public class RockPaperScissors {
         
         // TODO 7: Print what the computer chose using the array
         //         Format: "The computer is [choice]. "
-        
+        System.out.print("The computer is " + choices[computer] + ". ");
         
         // TODO 8: Print what the user chose using the array
         //         Format: "You are [choice]. "
-        
+        System.out.println("You are " + choices[user] + ".");
         
         // ============================================
         // ACT 5: DETERMINE THE WINNER
