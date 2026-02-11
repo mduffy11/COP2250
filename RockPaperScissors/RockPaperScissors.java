@@ -67,18 +67,26 @@ public class RockPaperScissors {
         
         // TODO 9: If it's a draw (user == computer)
         //         Print: "It is a draw!"
-        
+        if (user == computer) {
+            System.out.println("It is a draw!");
+        }
         
         // TODO 10: Else if user wins:
         //          - user==0 && computer==2 (scissor cuts paper)
         //          - user==1 && computer==0 (rock smashes scissor)
         //          - user==2 && computer==1 (paper wraps rock)
         //          Print: "You won!"
-        
+        else if ((user == 0 && computer == 2) || 
+                 (user == 1 && computer == 0) || 
+                 (user == 2 && computer == 1)) {
+            System.out.println("You won!");
+        }
         
         // TODO 11: Else computer wins
         //          Print: "Computer wins!"
-        
+        else {System.out.println("Computer wins!");
+            
+        }
         
     }
 }
