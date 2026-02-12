@@ -36,13 +36,13 @@ public class CharacterPractice {
         // ============================================
         
         // TODO 5: Check if ch is a letter using Character.isLetter()
-        Character.isLetter(ch);
+        System.out.println("Is letter? " + Character.isLetter(ch));
         
         // TODO 6: Check if ch is a digit using Character.isDigit()
-        Character.isDigit(ch);
+        System.out.println("Is digit? " + Character.isDigit(ch));
         
         // TODO 7: Check if ch is uppercase using Character.isUpperCase()
-        Character.isUpperCase(ch);
+        System.out.println("Is uppercase? " + Character.isUpperCase(ch));
         
         // ============================================
         // PART 3: CASE CONVERSION
@@ -50,11 +50,11 @@ public class CharacterPractice {
         
         // TODO 8: Convert ch to uppercase and print it
         char chUpper = Character.toUpperCase(ch);
-        System.out.println(chUpper);
+        System.out.println("Uppercase: " + chUpper);
 
         // TODO 9: Convert ch to lowercase and print it
         char chLower = Character.toLowerCase(ch);
-        System.out.println(chLower);
+        System.out.println("Lowercase: " + chLower);
 
         // ============================================
         // PART 4: VOWEL CHECK (PREVIEW)
@@ -62,13 +62,19 @@ public class CharacterPractice {
         
         // TODO 10: Check if ch is a vowel (a, e, i, o, u)
         char lower = Character.toLowerCase(ch);
+
         if (lower == 'a' || lower == 'e' || lower == 'i' 
-            || lower == 'o' || lower == 'u') {
-    // It's a vowel
-}
-        
+                || lower == 'o' || lower == 'u') {
+         // It's a vowel
+            System.out.println("It's a vowel");
+
+        } else {
+            System.out.println("It's not a vowel");
+        }
         System.out.println();
         System.out.println("--- Week 5 Lab Complete! ---");
         System.out.println("You're ready for Assignment 4: Vowel or Consonant");
+
+        input.close();
     }
 }
