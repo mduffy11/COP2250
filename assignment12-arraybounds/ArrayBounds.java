@@ -12,9 +12,9 @@ public class ArrayBounds {
 
     // -------------------------------------------------------
     // STEP 1 - Declare a static int array named data
-    // Initialize it with values: {1, 2, 3, 4, 5}
+    // Initialize it with 100 randomly chosen integers
     // -------------------------------------------------------
-    static int[] data = {1, 2, 3, 4, 5};
+    static int[] data = new int[100];
 
     // -------------------------------------------------------
     // STEP 2 - getElement(int index)
@@ -27,6 +27,7 @@ public class ArrayBounds {
 
     // -------------------------------------------------------
     // STEP 3 - main loop
+    // Fill the array with random integers.
     // Prompt user for index in a loop until they enter -1.
     // Use try-catch for ArrayIndexOutOfBoundsException.
     // Use try-catch for NumberFormatException.
@@ -35,8 +36,12 @@ public class ArrayBounds {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        for (int i = 0; i < data.length; i++) {
+            data[i] = (int)(Math.random() * 100);
+        }
+
         while (true) {
-            System.out.print("Enter an index (or -1 to quit): ");
+            System.out.print("Enter an index from 0 to 99 (or -1 to quit): ");
             String input = scanner.nextLine();
 
             // STEP 4 - Check for quit condition first
